@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/UserInterface/ChangeSceneButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/UserInterface/QuitButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/main_menu.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/font_default.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=6]
+
+[node name="MainScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+theme = ExtResource( 6 )
+
+[node name="MainMenu" type="TextureRect" parent="."]
+margin_left = 0.5
+margin_top = -0.255524
+margin_right = 1024.5
+margin_bottom = 598.745
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Title" parent="." instance=ExtResource( 1 )]
+margin_top = 97.515
+margin_bottom = 154.515
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -147.5
+margin_top = -73.5
+margin_right = 147.5
+margin_bottom = 73.5
+
+[node name="PlayButton" parent="Menu" instance=ExtResource( 2 )]
+custom_fonts/font = ExtResource( 5 )
+next_scene_path = "res://src/Levels/Level0.tscn"
+
+[node name="QuitButton" parent="Menu" instance=ExtResource( 3 )]
+margin_top = 75.0
+margin_bottom = 147.0
+custom_fonts/font = ExtResource( 5 )
