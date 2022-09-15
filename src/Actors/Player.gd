@@ -65,7 +65,6 @@ func calculate_stomp_velocity(
 
 func die() ->void:
 	PlayerData.deaths += 1
-	queue_free()
 
 
 
